@@ -2,48 +2,57 @@ export class Haiku {
   constructor(string) {
     this.string = string;
   }
+  //
+  // parseLine(string) {
+  //
+  // }
 
 
-  parseSentence(){
-    let lines = this.string.split(","); // array of sentences
+  // parseSentence(string){
+  //   // let words = this.string.split(""); // array of sentences
+  //   let splitLine = string.split(" ");
+  //   let lineCount = 0;
+  //   for (let i = 0; i < splitLine.length; i++) {
+  //     lineCount += psplitLine[i]
+  //   }
+  //   return lineCount;
+    // let splitLinesValue = { //syllable count
+    //   line0:0,
+    //   line1 : 0,
+    //   line2 : 0
+    // };
+    // let splitLines = { //array of singular words
+    //   line0 : null, //['hey', 'hi', 'how'];
+    //   line1 : null,
+    //   line2 : null
+    // };
+    //
+    // for (let i = 0; i < lines.length; i++) {
+    //   splitLines[line + "i"] = lines[i].split(" ");
+    // }
+    //
+    //
+    // for (let line in splitLines) {
+    //   for (let i = 0; i < line.length; i++) {
+    //     splitLinesValues[line + "i"] = this.wordCheck(line[i]);
+    //   }
+    // }
 
-    let splitLinesValue = { //syllable count
-      line0:0,
-      line1 : 0,
-      line2 : 0
-    };
-    let splitLines = { //array of singular words
-      line0 : null, //['hey', 'hi', 'how'];
-      line1 : null,
-      line2 : null
-    };
-
-    for (let i = 0; i < lines.length; i++) {
-      splitLines[line + "i"] = lines[i].split(" ");
-    }
-
-
-    for (let line in splitLines) {
-      for (let i = 0; i < line.length; i++) {
-        splitLinesValues[line + "i"] = this.wordCheck(line[i]);
-      }
-    }
-
-    let totalSyllables = 0;
-    for (let otherLine in splitLinesValues) {
-      // otherLine += totalSyllables;
-      totalSyllables += otherLine;
-    }
+    // let totalSyllables = 0;
+    // for (let otherLine in splitLinesValues) {
+    //   // otherLine += totalSyllables;
+    //   totalSyllables += otherLine;
+    // }
 
     // return totalSyllables === 17;
-    return totalSyllables;
+    // return totalSyllables;
     // let lineCount = 0;
-    // for (var i = 0; i < words.length; i++) {
-    //   lineCount += this.wordCheck(words[i]);
+    // for (let i = 0; i < words.length; i++) {
+    //   totalSyllables += this.wordCheck(words[i]);
     // }
-    // return lineCount;
+    // return this.wordCheck(string);
 
-  }
+  // }
 
   vowelCheck(letter) {
     const vowelArray = ['a','e','i','o','u','y'];

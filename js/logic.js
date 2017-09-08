@@ -1,15 +1,25 @@
 export class Haiku {
   constructor(string) {
-    this.string = string;
+    this.string = string.toLowerCase();
   }
 
-  //
-  // parseLine(string) {
-  //
-  // }
+
+  parseInput() {
+  let words = this.string.split(","); // array of sentences
+  let haiku = [];
+  for (let i = 0; i < words.length; i++) {
+    haiku.push(this.parseSentence(words[i]) );
+  }
+  return haiku;
+    // if (haiku[0] === 5 && haiku[1] === 7 && haiku[2] === 5) {
+    //   return true;
+    // } else {
+    //   return false;
+    // }
+  }
 
   parseSentence(string){
-  //   // let words = this.string.split(""); // array of sentences
+
     let splitLine = string.split(" ");
     let lineCount = 0;
     for (let i = 0; i < splitLine.length; i++) {
@@ -69,9 +79,12 @@ export class Haiku {
 
   wordCheck(stringIn) {
     let asArray= stringIn.split("");
-    let vowelCount = 0;
     let syllables = 0;
-
+    //exception for 'axe' 'the' words
+    //if e is last letter and word
+    //is less than three, count the e
+    //if e last letter, and greater than 3
+    //drop that shit
     if (asArray[asArray.length - 1] === 'e') {
       asArray.pop();
       if (asArray[asArray.length - 1] === 'l') {

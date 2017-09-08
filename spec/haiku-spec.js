@@ -58,8 +58,8 @@ describe('Haiku', function() {
     let haiku = new Haiku("homies home outside");
     expect(haiku.parseSentence("homies home outside")).toEqual(5);
   });
-  // it('should test register an entire Haiku as syllables', function() {
-  //   let haiku = new Haiku("A summer river being crossed, how pleasing, with sandals in my hands");
-  //   expect(haiku.parseSentence()).toEqual(true);
-  // });
+  it('should test register an entire Haiku as syllables', function() {
+    let haiku = new Haiku("An old silent pond,a frog jumps into the pond,splash silence again");
+    expect(haiku.parseInput()).toEqual(true);
+  });
 });

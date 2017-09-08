@@ -2,19 +2,20 @@ export class Haiku {
   constructor(string) {
     this.string = string;
   }
+
   //
   // parseLine(string) {
   //
   // }
 
-
-  // parseSentence(string){
+  parseSentence(string){
   //   // let words = this.string.split(""); // array of sentences
-  //   let splitLine = string.split(" ");
-  //   let lineCount = 0;
-  //   for (let i = 0; i < splitLine.length; i++) {
-  //     lineCount += psplitLine[i]
-  //   }
+    let splitLine = string.split(" ");
+    let lineCount = 0;
+    for (let i = 0; i < splitLine.length; i++) {
+      lineCount += this.wordCheck(splitLine[i]);
+    }
+    return lineCount;
   //   return lineCount;
     // let splitLinesValue = { //syllable count
     //   line0:0,
@@ -47,12 +48,12 @@ export class Haiku {
     // return totalSyllables === 17;
     // return totalSyllables;
     // let lineCount = 0;
+    // }
     // for (let i = 0; i < words.length; i++) {
     //   totalSyllables += this.wordCheck(words[i]);
-    // }
     // return this.wordCheck(string);
 
-  // }
+  }
 
   vowelCheck(letter) {
     const vowelArray = ['a','e','i','o','u','y'];
